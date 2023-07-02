@@ -15,4 +15,13 @@ return {
     BRIGHT_MAGENTA = "\27[95m",
     BRIGHT_CYAN = "\27[96m",
     BRIGHT_WHITE = "\27[97m",
+    --% bg colors --
+    BGBlack = "\27[40m",
+    BGRed = "\27[41m",
+    BGGreen = "\27[42m",
+    BGYellow = "\27[43m",
+    BGBlue = "\27[44m",
+    BGMagenta = "\27[45m",
+    BGCyan = "\27[46m",
+    BGWhite = "\27[47m"
 }

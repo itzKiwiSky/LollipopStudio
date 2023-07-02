@@ -6,16 +6,22 @@ function parser.runCommand(command, ...)
     for cat = 1, #commands, 1 do
         --% find command by name
         for cmd = 1, #commands[cat], 1 do
-            if "--" .. commands[cat][cmd].name == command then
-                commands[cat][cmd].run(unpack(...))
+            if commands[cat][cmd].name == command then
+                local result, err = commands[cat][cmd].run(unpack(...))
+                if not result then
+                    error(err)
+                end
                 return
             end
         end
         --% do the same thing but looking for aliases
         for cmd = 1, #commands[cat], 1 do
             for alias = 1, #commands[cat][cmd].alias, 1 do
-                if "-" .. commands[cat][cmd].alias[alias] == command then
-                    commands[cat][cmd].run(unpack(...))
+                if commands[cat][cmd].alias[alias] == command then
+                    local result, err = commands[cat][cmd].run(unpack(...))
+                    if not result then
+                        error(err)
+                    end
                     return
                 end
             end
