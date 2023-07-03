@@ -59,21 +59,6 @@ return {
             end,
         },
         {
-            name = "refresh",
-            alias = {"rs",},
-            category = "Project Management",
-            description = "Remove a project",
-            subcommands = {
-                {
-                    name = "project-name",
-                    description = "the name of the project",
-                },
-            },
-            run = function(name)
-    
-            end,
-        },
-        {
             name = "list",
             alias = {"l","ls",},
             category = "Project Management",

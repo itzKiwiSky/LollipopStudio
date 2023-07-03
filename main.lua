@@ -21,7 +21,7 @@ end
 
 ENV = "APPDATA"
 
-local OS = getos.get_os_name()
+OS = getos.get_os_name()
 if OS == "Windows" then
     ENV = "APPDATA"
 else
