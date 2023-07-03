@@ -55,7 +55,7 @@ return {
                 },
             },
             run = function(name)
-    
+                project.remove(name)
             end,
         },
         {
@@ -79,17 +79,13 @@ return {
             category = "Project Management",
             description = "List all projects",
             run = function()
-                print(#registry.data)
+                print(colors.BRIGHT_WHITE .. "Listing projects" .. colors.RESET)
+                print(colors.BRIGHT_WHITE .. "-===============-" .. colors.RESET)
                 if #registry.data.projects == 0 then
-                    print(colors.BRIGHT_MAGENTA .. "No projects found :(" .. colors.RESET)
+                    print(colors.BRIGHT_MAGENTA .. "No projects found created" .. colors.RESET)
                 else
-                    local c = 6
                     for p = 1, #registry.data.projects, 1 do
-                        c = c + 1
-                        print(colors[10 + c] .. registry.data.projects[p] .. colors.RESET)
-                        if c > 5 then
-                            c = 0
-                        end
+                        print(colors.BRIGHT_WHITE .. "[" .. p .. "] - " .. registry.data.projects[p] .. colors.RESET)
                     end
                 end
             end,

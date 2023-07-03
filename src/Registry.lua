@@ -1,7 +1,7 @@
 registry = {}
 
 registry.data = {
-    setup = 1,
+    setup = 0,
     installed = true,
     modules = {},
     projects = {},

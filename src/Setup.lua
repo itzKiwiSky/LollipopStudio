@@ -10,7 +10,7 @@ Select your IDE:
 ]]
 
 function Setup.run()
-    if registry.data.setup ~= nil or registry.data.setup == 1 then
+    if registry.data.setup == 1 then
         local editConfirm = true
         io.write(colors.BRIGHT_YELLOW .. "[:WARN:] This will edit your configs, are you sure you want continue? [Y/N] " .. colors.RESET)
         while editConfirm do
